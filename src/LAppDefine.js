@@ -42,6 +42,9 @@ var LAppDefine = {
     // 外部定義ファイル(json)と合わせる
     MOTION_GROUP_IDLE : "idle", // アイドリング
     MOTION_GROUP_TAP_BODY : "tap_body", // 体をタップしたとき
+	MOTION_GROUP_TAP_HEAD : "tap_head",
+	MOTION_GROUP_TAP_FACE : "tap_face",
+	MOTION_GROUP_TAP_BREAST : "tap_breast",
     MOTION_GROUP_FLICK_HEAD : "flick_head", // 頭を撫でた時
     MOTION_GROUP_PINCH_IN : "pinch_in", // 拡大した時
     MOTION_GROUP_PINCH_OUT : "pinch_out", // 縮小した時
@@ -49,6 +52,8 @@ var LAppDefine = {
 
     // 外部定義ファイル(json)と合わせる
     HIT_AREA_HEAD : "head",
+	HIT_AREA_FACE : "face",
+	HIT_AREA_BREAST : "breast",
     HIT_AREA_BODY : "body"
     
 };

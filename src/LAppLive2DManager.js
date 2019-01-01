@@ -154,7 +154,26 @@ LAppLive2DManager.prototype.tapEvent = function(x, y)
             if (LAppDefine.DEBUG_LOG)
                 console.log("Tap face.");
 
-            this.models[i].setRandomExpression();
+            //this.models[i].setRandomExpression();
+            this.models[i].startRandomMotion(LAppDefine.MOTION_GROUP_TAP_HEAD,LAppDefine.PRIORITY_NORMAL);
+        }
+		else if (this.models[i].hitTest(LAppDefine.HIT_AREA_FACE, x, y))
+        {
+            // 体をタップしたらモーション
+            if (LAppDefine.DEBUG_LOG)
+                console.log("Tap face." + " models[" + i + "]");
+
+            this.models[i].startRandomMotion(LAppDefine.MOTION_GROUP_TAP_FACE,
+                                             LAppDefine.PRIORITY_NORMAL);
+        }
+		else if (this.models[i].hitTest(LAppDefine.HIT_AREA_BREAST, x, y))
+        {
+            // 体をタップしたらモーション
+            if (LAppDefine.DEBUG_LOG)
+                console.log("Tap breast." + " models[" + i + "]");
+
+            this.models[i].startRandomMotion(LAppDefine.MOTION_GROUP_TAP_BREAST,
+                                             LAppDefine.PRIORITY_NORMAL);
         }
         else if (this.models[i].hitTest(LAppDefine.HIT_AREA_BODY, x, y))
         {

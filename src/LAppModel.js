@@ -313,7 +313,7 @@ LAppModel.prototype.setRandomExpression = function()
 
     var no = parseInt(Math.random() * tmp.length);
 
-    this.setExpression(tmp[no]);
+    //this.setExpression(tmp[no]);
 }
 
 
