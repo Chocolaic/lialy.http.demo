@@ -49,6 +49,9 @@ var LAppDefine = {
     MOTION_GROUP_PINCH_IN : "pinch_in", // 拡大した時
     MOTION_GROUP_PINCH_OUT : "pinch_out", // 縮小した時
     MOTION_GROUP_SHAKE : "shake", // シェイク
+	MOTION_GROUP_TAP_CHANGE : "tap_change",
+	MOTION_GROUP_TAP_DANCE : "tap_dance",
+	MOTION_GROUP_TAP_HELLO : "tap_hello",
 
     // 外部定義ファイル(json)と合わせる
     HIT_AREA_HEAD : "head",

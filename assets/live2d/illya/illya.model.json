@@ -59,7 +59,9 @@
 		],
 		"tap_change":
 		[
-			{"file":"motions/ylia_11.mtn","sound":"sounds/ylia_11.mp3","fade_in":0,"fade_out":0,"text":""}
+			{"file":"motions/ylia_11.mtn","sound":"sounds/ylia_11.mp3","fade_in":0,"fade_out":0,"text":""},
+			{"file":"motions/ylia_01.mtn","sound":"sounds/ylia_01.mp3","fade_in":0,"fade_out":0,"text":"你好~欧尼酱~"},
+			{"file":"motions/ylia_02.mtn","sound":"sounds/ylia_02.mp3","fade_in":0,"fade_out":0,"text":"你好~master~"}
 		]
 	}
 }

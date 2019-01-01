@@ -33,8 +33,7 @@ LAppLive2DManager.prototype.changeModel = function(gl)
     {
         // モデル切り替えボタンが押された時、モデルを再読み込みする
         this.reloadFlg = false;
-        var no = parseInt(this.count % 5);
-
+        var no = parseInt(this.count % 2);
         var thisRef = this;
         switch (no)
         {

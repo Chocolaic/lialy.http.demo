@@ -169,7 +169,7 @@ function draw()
         
         if (model.initialized && !model.updating)
         {
-			if(this.MotionTicks>=1000){
+			if(this.MotionTicks>=1500){
 				model.randomMotion();
 				MotionTicks=0;
 			}
@@ -189,7 +189,6 @@ function draw()
     MatrixStack.pop();
 }
 
-
 function changeModel()
 {
     var btnChange = document.getElementById("btnChange");
@@ -200,8 +199,18 @@ function changeModel()
     
     this.live2DMgr.reloadFlg = true;
     this.live2DMgr.count++;
-
-    this.live2DMgr.changeModel(this.gl);
+	this.live2DMgr.changeModel(this.gl);
+	setTimeout(function(){
+	for (var i = 0; i < this.live2DMgr.numModels(); i++)
+	{
+		var model = this.live2DMgr.getModel(i);
+		if (this.isModelShown && model.initialized && !model.updating)
+		{
+			model.startRandomMotion(LAppDefine.MOTION_GROUP_TAP_CHANGE,LAppDefine.PRIORITY_NORMAL);
+			return;
+		}
+	}
+	},1000);
 }
 
 /* ********** マウスイベント ********** */
