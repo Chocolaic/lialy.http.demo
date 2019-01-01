@@ -8,9 +8,6 @@ window.onerror = function(msg, url, line, col, error) {
 
 function sampleApp1()
 {
-	if(document.referrer!="http://illyasviel.cc/" || document.referrer!="http://illyasviel.cc/live2d.html" ){
-		window.location.href = "http://illyasviel.cc/";
-	}
     this.platform = window.navigator.platform.toLowerCase();
     
     this.live2DMgr = new LAppLive2DManager();
