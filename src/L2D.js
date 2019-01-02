@@ -6,8 +6,12 @@ window.onerror = function(msg, url, line, col, error) {
     l2dError(errmsg);
 }
 
-function sampleApp1()
+function L2Dbegin()
 {
+	var code=window.location.href.split("?")[1];
+	if(code!=getViewCode()){
+		window.location.href="index.html"
+	}
     this.platform = window.navigator.platform.toLowerCase();
     
     this.live2DMgr = new LAppLive2DManager();

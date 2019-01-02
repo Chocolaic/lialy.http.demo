@@ -5,6 +5,7 @@
 <title>Loading...</title>
 <script src="http://s0.qhimg.com/lib/jquery/183.js"></script>
 <script src="src/resLoader.js"></script>
+<script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 <style>
 .progress{
 	width: 600px;
@@ -38,34 +39,8 @@
 		<span class="total"></span>
 	</div>
 </div>
-
-
-
-<script>
-var loader = new resLoader({
-	resources : [
-		'http://illyasviel.cc/assets/image/back_class_normal.png',
-		'http://illyasviel.cc/assets/live2d/illya_basesuit/moc/ylia.moc',
-		'http://illyasviel.cc/assets/live2d/illya_basesuit/moc/ylia.2048/texture_00.png',
-		'http://illyasviel.cc/assets/live2d/illya/moc/ylia02.moc',
-		'http://illyasviel.cc/assets/live2d/illya/moc/ylia02.2048/texture_00.png'
-	],
-	onStart : function(total){
-		console.log('start:'+total);
-	},
-	onProgress : function(current, total){
-		console.log(current+'/'+total);
-		var percent = current/total*100;
-		$('.progressbar').css('width', percent+'%');
-		$('.progresstext .current').text(current);
-		$('.progresstext .total').text(total);
-	},
-	onComplete : function(total){
-		window.location.href = "http://illyasviel.cc/live2d.html";
-	}
-});
-
-loader.start();
-</script>
+<script type="text/javascript" src="http://static.hdslb.com/js/md5.js"></script>
+<script type="text/javascript" src="src/code.js"></script>
+<script type="text/javascript" src="src/Loader.js"></script>
 </body>
 </html>
