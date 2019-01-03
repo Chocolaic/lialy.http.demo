@@ -26,6 +26,8 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 */
+				width: 95%;
+				height: 90%;
                 background-size: 150%;
                 background-position: 50% 50%;
                 background-image: url(assets/image/back_class_normal.png);
@@ -87,12 +89,6 @@
         </style>
 
     </head>
-	<script>
-		var canvas=document.getElementById('glcanvas');
-		var viewWidth=window.innerWidth||document.documentElement.clientWidth;
-		document.body.style.width=viewWidth;
-		canvas.width=viewWidth;
-	</script>
     <body onload="L2Dbegin()">
         
         <p>
@@ -100,7 +96,7 @@
         </p>
         
         <div>
-            <canvas id="glcanvas" width="680" height="940" 
+            <canvas id="glcanvas"
                 style="border:dashed 1px #CCC">
             </canvas>
         </div>
