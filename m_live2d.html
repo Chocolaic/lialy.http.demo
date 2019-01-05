@@ -94,7 +94,8 @@
         </p>
         
         <script>
-			var glcanvas = "<canvas id='glcanvas' width='" + screen.availWidth + "px' height='"+ screen.availHeight + "px' style='border:dashed 1px #CCC'></vanvas>";
+			var glwidth=screen.availWidth;
+			var glcanvas = "<canvas id='glcanvas' width='" + glwidth + "px' height='"+ glwidth*1.38 + "px' style='border:dashed 1px #CCC'></vanvas>";
 			document.body.insertAdjacentHTML("beforeEnd", glcanvas);
 		</script>
         <div id="myconsole" style="color:#000">---- Log ----</div>
