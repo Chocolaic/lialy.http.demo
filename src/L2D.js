@@ -10,7 +10,7 @@ function L2Dbegin()
 {
 	var code=window.location.href.split("?")[1];
 	if(code!=getViewCode()){
-		//window.location.href="index.html"
+		window.location.href="index.html"
 	}
     this.platform = window.navigator.platform.toLowerCase();
     
