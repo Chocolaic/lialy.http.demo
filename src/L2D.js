@@ -10,7 +10,7 @@ function L2Dbegin()
 {
 	var code=window.location.href.split("?")[1];
 	if(code!=getViewCode()){
-		window.location.href="index.html"
+		//window.location.href="index.html"
 	}
     this.platform = window.navigator.platform.toLowerCase();
     
@@ -204,6 +204,7 @@ function changeModel()
     this.live2DMgr.reloadFlg = true;
     this.live2DMgr.count++;
 	this.live2DMgr.changeModel(this.gl);
+	modelScaling(0.9);
 	setTimeout(function(){
 	for (var i = 0; i < this.live2DMgr.numModels(); i++)
 	{
@@ -255,7 +256,6 @@ function modelScaling(scale)
 function modelTurnHead(event)
 {
     thisRef.drag = true;
-    
     var rect = event.target.getBoundingClientRect();
     
     var sx = transformScreenX(event.clientX - rect.left);
@@ -273,6 +273,15 @@ function modelTurnHead(event)
     
     // タップした場所に応じてモーションを再生
     thisRef.live2DMgr.tapEvent(vx, vy);
+}
+
+function modelwithMouse(event)
+{
+	var rect = event.target.getBoundingClientRect();
+    var vx = transformViewX(event.clientX - rect.left);
+    var vy = transformViewY(event.clientY - rect.top);
+
+    thisRef.dragMgr.setPoint(vx, vy); // その方向を向く
 }
 
 
@@ -339,9 +348,8 @@ function mouseEvent(e)
         modelTurnHead(e);
         
     } else if (e.type == "mousemove") {
-        
         followPointer(e);
-        
+		//modelwithMouse(e);
     } else if (e.type == "mouseup") {
         
         // 右クリック以外なら処理を抜ける

@@ -1,0 +1,62 @@
+var LAppDefine = {
+    
+    // デバッグ。trueのときにログを表示する。
+    DEBUG_LOG : true,
+    DEBUG_MOUSE_LOG : false, // マウス関連の冗長なログ
+    // DEBUG_DRAW_HIT_AREA : false, // 当たり判定の可視化
+    // DEBUG_DRAW_ALPHA_MODEL : false, // 半透明のモデル描画を行うかどうか。
+    
+    //  全体の設定
+    
+    // 画面
+    VIEW_MAX_SCALE : 1.6,
+    VIEW_MIN_SCALE : 1.6,
+
+    VIEW_LOGICAL_LEFT : -1,
+    VIEW_LOGICAL_RIGHT : 1,
+
+    VIEW_LOGICAL_MAX_LEFT : -2,
+    VIEW_LOGICAL_MAX_RIGHT : 2,
+    VIEW_LOGICAL_MAX_BOTTOM : -2,
+    VIEW_LOGICAL_MAX_TOP : 2,
+    
+    // モーションの優先度定数
+    PRIORITY_NONE : 0,
+    PRIORITY_IDLE : 1,
+    PRIORITY_NORMAL : 2,
+    PRIORITY_FORCE : 3,
+    
+    // モデルの後ろにある背景の画像ファイル
+    BACK_IMAGE_NAME : "assets/image/back_class_normal.png",
+
+    //  モデル定義
+	MODEL_SUIT_ILLYA : "assets/live2d/illya_basesuit/illya.model_b.json",
+	MODEL_ILLYA : "assets/live2d/illya/illya.model_b.json",
+    MODEL_HARU : "assets/live2d/haru/haru.model.json",
+    MODEL_HARU_A : "assets/live2d/haru/haru_01.model.json",
+    MODEL_HARU_B : "assets/live2d/haru/haru_02.model.json",
+    MODEL_SHIZUKU : "assets/live2d/shizuku/shizuku.model.json",
+    MODEL_WANKO : "assets/live2d/wanko/wanko.model.json",
+    MODEL_EPSILON : "assets/live2d/Epsilon2.1/Epsilon2.1.model.json",
+
+    // 外部定義ファイル(json)と合わせる
+    MOTION_GROUP_IDLE : "idle", // アイドリング
+    MOTION_GROUP_TAP_BODY : "tap_body", // 体をタップしたとき
+	MOTION_GROUP_TAP_HEAD : "tap_head",
+	MOTION_GROUP_TAP_FACE : "tap_face",
+	MOTION_GROUP_TAP_BREAST : "tap_breast",
+    MOTION_GROUP_FLICK_HEAD : "flick_head", // 頭を撫でた時
+    MOTION_GROUP_PINCH_IN : "pinch_in", // 拡大した時
+    MOTION_GROUP_PINCH_OUT : "pinch_out", // 縮小した時
+    MOTION_GROUP_SHAKE : "shake", // シェイク
+	MOTION_GROUP_TAP_CHANGE : "tap_change",
+	MOTION_GROUP_TAP_DANCE : "tap_dance",
+	MOTION_GROUP_TAP_HELLO : "tap_hello",
+
+    // 外部定義ファイル(json)と合わせる
+    HIT_AREA_HEAD : "head",
+	HIT_AREA_FACE : "face",
+	HIT_AREA_BREAST : "breast",
+    HIT_AREA_BODY : "body"
+    
+};
